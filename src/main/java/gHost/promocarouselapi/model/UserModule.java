@@ -13,8 +13,8 @@ public class UserModule {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @Column(name = "order", nullable = false)
-    private Integer order;
+    @Column(name = "moduleOrder", nullable = false)
+    private Integer moduleOrder;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
@@ -32,21 +32,28 @@ public class UserModule {
         this.id = id;
     }
 
-    public int getOrder() {
-        return order;
+    public Integer getModuleOrder() {
+        return moduleOrder;
     }
 
-    public void setOrder(Integer order) {
-        this.order = order;
+    public void setModuleOrder(Integer moduleOrder) {
+        this.moduleOrder = moduleOrder;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public User getUser() {
         return user;
     }
 
+    public void setModule(Module module) {
+        this.module = module;
+    }
+
     public Module getModule() {
         return module;
     }
-
 
 }

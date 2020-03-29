@@ -18,7 +18,19 @@ public class User {
     private String name;
 
     @OneToMany(mappedBy = "user")
-    Set<UserModule> userModules;
+    private Set<UserModule> userModules;
+
+    public void setUserModules(Set<UserModule> userModules) {
+        this.userModules = userModules;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Set<UserModule> getUserModules() {
+        return userModules;
+    }
 
     public long getId() {
         return id;
