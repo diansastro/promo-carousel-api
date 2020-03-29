@@ -27,6 +27,10 @@ java -jar target/promo-carousel-api-0.0.1-SNAPSHOT.jar
 
 ```
 
+**5. Import sql data**
+
+Download here <https://bit.ly/2QT2PUS>
+
 Alternatively, you can run the app without packaging it using -
 
 ```bash
